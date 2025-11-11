@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ED84F28E"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btMenu"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#247E28"
+        android:fontFamily="serif"
+        android:onClick="btMenu"
+        android:text="Menu"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="monospace"
+        android:text="Bichos do Paraná!"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btIndiv"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="220dp"
+        android:backgroundTint="#247E28"
+        android:fontFamily="monospace"
+        android:onClick="btIndivClick"
+        android:text="1 Player"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btDupla"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="124dp"
+        android:backgroundTint="#247E28"
+        android:fontFamily="monospace"
+        android:onClick="btDuplaClick"
+        android:text="2 Players"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btIndiv"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/tvTempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:fontFamily="monospace"
+        android:textColor="#000000"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btIndiv" />
+
+
+    <TextView
+        android:id="@+id/tvJogador1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="30dp"
+        android:text="Player 1: "
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textColor="#247E28"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/tvJogador2"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvJogador2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="25dp"
+        android:text="Player 2: "
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textColor="#247E28"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/tvJogador1"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvJogador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="monospace"
+        android:text="Player 1:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/tvJogador2"
+        app:layout_constraintStart_toStartOf="@id/tvJogador1"
+        app:layout_constraintTop_toBottomOf="@id/tvJogador1"
+        tools:ignore="HardcodedText" />
+
+    <GridLayout
+        android:id="@+id/tabuleiroGrid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:rowCount="6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="3:5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvJogador" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="70dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:srcCompat="@drawable/logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
