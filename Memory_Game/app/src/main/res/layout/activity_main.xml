@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BA4C82AF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="monospace"
+        android:text="Can you remember it ?"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+
+    <Button
+        android:id="@+id/btIndiv"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="#4c6c97"
+        android:fontFamily="monospace"
+        android:text="1 Player"
+        android:textSize="40sp"
+        android:onClick="btIndivClick"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btDupla"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#4c6c97"
+        android:text="2 Players"
+        android:textSize="40sp"
+        android:fontFamily="serif"
+        android:textColor="#000000"
+        android:onClick="btDuplaClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btIndiv"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvTempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btIndiv" />
+
+    <TextView
+        android:id="@+id/tvJogador1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="-10dp"
+        android:text="Jogador 1: "
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:textColor="#d80000"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/tvJogador2"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvJogador2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"
+        android:text="Jogador 2: "
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:textColor="#4c6c97"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/tvJogador1"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvJogador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Jogador 1 joga"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:fontFamily="serif"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/tvJogador1"
+        app:layout_constraintEnd_toEndOf="@id/tvJogador2"
+        app:layout_constraintTop_toBottomOf="@id/tvJogador1" />
+
+    <GridLayout
+        android:id="@+id/tabuleiroGrid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:rowCount="6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="3:5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvJogador"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="177dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            app:srcCompat="@drawable/logo" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btMenu"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="-15dp"
+        android:layout_marginTop="50dp"
+        android:textSize="15sp"
+        android:backgroundTint="#d80000"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:text="Menu"
+        android:visibility="gone"
+        android:onClick="btMenu"
+        app:layout_constraintEnd_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
